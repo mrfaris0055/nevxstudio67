@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Cart & Checkout | Nevx</title>
+  <meta name="description" content="Review your Nevx cart and place your order by WhatsApp. Cash on Delivery, JazzCash, Easypaisa or bank transfer.">
+  <!-- Share preview (WhatsApp / Facebook). Add images/og-image.jpg (1200x630) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nevx">
+  <meta property="og:title" content="Your Cart & Checkout | Nevx">
+  <meta property="og:description" content="Review your Nevx cart and place your order by WhatsApp. Cash on Delivery, JazzCash, Easypaisa or bank transfer.">
+  <meta property="og:url" content="https://nevx.pk/cart.html">
+  <meta property="og:image" content="https://nevx.pk/images/og-image.jpg">
+  <meta name="theme-color" content="#0B1F3A">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="cart">
+<header class="site-header" id="site-header"></header>
+<main>
+
+<div class="container">
+  <div class="page-head"><h1>Your cart</h1></div>
+  <div class="empty" id="cart-empty" hidden><h2>Your cart is empty</h2><p class="muted">Add something you like and it will wait for you here.</p><a class="btn" href="shop.html">Browse the shop</a></div>
+  <div class="empty" id="order-done" hidden><h2>Your order is ready to send</h2><p class="muted">WhatsApp should open with your order details. Tap send to confirm. If it did not open, use the button below.</p><a class="btn" id="wa-again" href="#" target="_blank" rel="noopener">Open WhatsApp</a></div>
+  <div id="cart-content" hidden>
+    <div><ul class="lines" id="cart-items"></ul></div>
+    <div>
+      <div class="box" style="margin-top:0">
+        <h3>Order summary</h3>
+        <div class="row"><span>Subtotal</span><span id="subtotal"></span></div>
+        <div class="row"><span>Delivery</span><span id="shipping"></span></div>
+        <div class="row total"><span>Total</span><span id="total"></span></div>
+      </div>
+      <form class="box" id="checkout">
+        <h3>Delivery details</h3>
+        <label for="name">Full name</label><input id="name" name="name" required autocomplete="name">
+        <label for="phone">Phone number</label><input id="phone" name="phone" type="tel" required pattern="[0-9+ \-]{10,15}" title="Enter a valid phone number" autocomplete="tel" placeholder="0300 1234567">
+        <label for="address">Full address with city</label><textarea id="address" name="address" rows="3" required autocomplete="street-address"></textarea>
+        <h3 style="margin-top:22px">Payment method</h3>
+        <div id="pay-options"></div>
+        <div id="pay-info"></div>
+        <button class="btn" type="submit" style="width:100%">Place order on WhatsApp</button>
+        <p class="muted small" style="margin-top:10px">Your order opens in WhatsApp as a ready-made message. Nothing is paid until we confirm.</p>
+      </form>
+    </div>
+  </div>
+</div>
+</main>
+<footer class="site-footer" id="site-footer"></footer>
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
